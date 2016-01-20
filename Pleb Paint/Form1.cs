@@ -87,7 +87,7 @@ namespace Pleb_Paint
         private void MainForm_MouseMove(object sender, MouseEventArgs e)
         {
             if (draw)
-            {
+            {//comment
                 int mouseX = Cursor.Position.X;
                 int mouseY = Cursor.Position.Y;
 
