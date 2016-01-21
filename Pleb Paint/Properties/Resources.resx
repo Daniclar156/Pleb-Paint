@@ -121,10 +121,4 @@
   <data name="KAPPA" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\KAPPA.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="MC_Bach_Concerto_For_Flute_In_D_Minor_Second_Movement" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MC Bach Concerto For Flute In D Minor Second Movement.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="The_more_you_know" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\The more you know.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
 </root>

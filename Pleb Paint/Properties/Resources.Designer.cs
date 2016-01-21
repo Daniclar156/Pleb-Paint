@@ -69,23 +69,5 @@ namespace Pleb_Paint.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
-        internal static System.IO.UnmanagedMemoryStream MC_Bach_Concerto_For_Flute_In_D_Minor_Second_Movement {
-            get {
-                return ResourceManager.GetStream("MC_Bach_Concerto_For_Flute_In_D_Minor_Second_Movement", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
-        internal static System.IO.UnmanagedMemoryStream The_more_you_know {
-            get {
-                return ResourceManager.GetStream("The_more_you_know", resourceCulture);
-            }
-        }
     }
 }

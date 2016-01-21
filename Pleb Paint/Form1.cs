@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using System.Threading;
 using System.Media;
 using System.Drawing.Imaging;
+using System.IO;
+using System.Diagnostics;
 
 
 namespace Pleb_Paint
@@ -26,17 +28,22 @@ namespace Pleb_Paint
         Boolean circlebrushSelected = false;
         bool draw = false;
         Graphics g;
-
+        System.Windows.Media.MediaPlayer backgroundMusic = new System.Windows.Media.MediaPlayer();
+        System.Windows.Media.MediaPlayer plebSound = new System.Windows.Media.MediaPlayer();
         int size = 50;
 
         public MainForm()
         {
+           
             InitializeComponent();
+            backgroundMusic.Open(new System.Uri(Path.Combine(Path.GetDirectoryName(Application.ExecutablePath),"backgroundmusic.mp3")));
+            plebSound.Open(new System.Uri(Path.Combine(Path.GetDirectoryName(Application.ExecutablePath),"pleblife.mp3")));
         }
 
         private void MainForm_Load(object sender, EventArgs e)
         {
             SplashScreen();
+            
 
         }
         //square button press
@@ -47,6 +54,8 @@ namespace Pleb_Paint
             squarebrushButton.BackColor = Color.SandyBrown;
             circlebrushButton.BackColor = Color.NavajoWhite;
             largebrushButton.BackColor = Color.NavajoWhite;
+
+
 
         }
         //circle button press
@@ -87,7 +96,7 @@ namespace Pleb_Paint
         private void MainForm_MouseMove(object sender, MouseEventArgs e)
         {
             if (draw)
-            {//comment
+            {
                 int mouseX = Cursor.Position.X;
                 int mouseY = Cursor.Position.Y;
 
@@ -197,7 +206,7 @@ namespace Pleb_Paint
         /// </summary>
         public void SplashScreen()
         {
-            pleblifesound.PlayLooping();
+            
             Form ss = new Form();
             ss.FormBorderStyle = FormBorderStyle.None;
             ss.Size = new Size(400, 400);
@@ -205,6 +214,7 @@ namespace Pleb_Paint
             ss.BackColor = Color.Blue;
             ss.TransparencyKey = Color.Blue;
             ss.Show();
+            plebSound.Play();
             Graphics ssGraphics = ss.CreateGraphics();
             SolidBrush ssBrush = new SolidBrush(Color.DimGray);
             SolidBrush textBrush = new SolidBrush(Color.Green);
@@ -224,9 +234,8 @@ namespace Pleb_Paint
                 ssGraphics.FillRectangle(ssBrush, i, 330, 3, 3);
                 Thread.Sleep(10);
             }
-            Thread.Sleep(3000);
-            pleblifesound.Stop();
-            backgroundTheme.PlayLooping();
+            Thread.Sleep(3000);         
+            backgroundMusic.Play();
             ss.Close();
         }
     }
